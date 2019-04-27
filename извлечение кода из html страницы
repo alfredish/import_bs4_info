@@ -1,0 +1,16 @@
+from bs4 import BeautifulSoup 
+
+r = requests.get("url")
+
+var = BeautifulSoup(r.text)
+
+var - выдаст html код страницы
+
+var.prettify() чуть-чуть красивее
+
+var.html.body.table.findAll("tr") выдаст строки таблицы в html коде в виде списка
+........var.string.strip() добавить значение кода без пробелов
+string - возвращает,то что внутри тега
+
+var.html.body.table['свойство'] выдаст значение свойства
+var("свойство") выдаст все значения свойства на всей странице
